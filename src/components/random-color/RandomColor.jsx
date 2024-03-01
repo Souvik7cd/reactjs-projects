@@ -39,7 +39,7 @@ const RandomColor = () => {
   useEffect(()=> {
     if(typeOfColor === "rgb") generateRandomRgbColor();
     else if(typeOfColor === "hex") generateRandomHexColor();
-  }, [typeOfColor])
+  }, [typeOfColor]) // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
     <div className="container" style={{ backgroundColor: color }}>
