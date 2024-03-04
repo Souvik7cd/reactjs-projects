@@ -1,0 +1,14 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: calc(100vw - 20px);
+  height: 100vh;
+  gap: 20px;
+}
+
+.star {
+  margin: 0.6rem;
+  transform: scale(2);
+  cursor: pointer;
+}
