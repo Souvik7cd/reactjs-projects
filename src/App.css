@@ -17,11 +17,11 @@ button {
   color: white;
 }
 .bg-products {
-  background-color: rgb(232, 232, 232);
+  background-color: #b2bfc3;
 }
 .bg-treeview{
   background-color: #272727;
 }
 .bg-qrcode {
-  background-color: transparent;
+  background-color: #b2bfc3;
 }

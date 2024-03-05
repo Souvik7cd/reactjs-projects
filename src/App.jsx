@@ -5,6 +5,7 @@ import LoadMore from './components/load-more/LoadMore'
 import QrCodeGenerator from './components/qr-code-generator/QrCodeGenerator'
 import RandomColor from './components/random-color/RandomColor'
 import StarRating from './components/star-rating/StarRating'
+import SwitchTheme from './components/switch-theme/SwitchTheme'
 import TreeView from './components/tree-view/TreeView'
 
 import {menus} from './components/tree-view/menus'
@@ -20,6 +21,7 @@ function App() {
       <LoadMore url="https://dummyjson.com/products" limit={20} />
       <TreeView menus={menus} />
       <QrCodeGenerator />
+      <SwitchTheme />
     </>
   )
 }

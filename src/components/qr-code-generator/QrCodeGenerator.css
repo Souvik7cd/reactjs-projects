@@ -31,3 +31,13 @@ h1.qr-heading {
   display: block;
   height: 256px;
 }
+.qr-form {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+  border: 1px solid gray;
+  border-radius: 0.5rem;
+}
