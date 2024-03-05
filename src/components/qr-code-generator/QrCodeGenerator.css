@@ -1,0 +1,33 @@
+h1.qr-heading {
+  margin: 0;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-field label{
+  margin-bottom: 0.5rem;
+}
+.form-field-inline {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.form-field-inline input{
+  width: 256px;
+  padding: 0.5rem 0.4rem;
+  font-size: 16px;
+  height: 26px;
+}
+.form-field-inline button{
+  padding: 0.5rem 0.4rem;
+  height: 100%;
+  font-size: 16px;
+}
+
+.qr-output {
+  display: block;
+  height: 256px;
+}
