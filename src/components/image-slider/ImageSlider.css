@@ -1,0 +1,62 @@
+.position-relative {
+  position: relative !important;
+}
+
+.image-container {
+  margin-top: 10vh;
+  height: 480px;
+  width: 720px;
+}
+
+.image-container img {
+  width: 720px;
+  height: 480px;
+  border-radius: 1rem;
+  object-fit: cover;
+}
+
+.slider-button-container {
+  display: flex;
+  flex-direction: row;
+  width: calc(100% - 2rem);
+  position: absolute;
+  justify-content: space-between;
+  top: 50%;
+  margin: 1rem;
+}
+
+.slider-button-container button {
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.d-none { display: none; }
+
+.slide-indicator-container {
+  position: absolute;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: row;
+  bottom: 2%;
+  width: 100%;
+  justify-content: center;
+}
+.slide-indicator {
+  margin: 0.3rem;
+  color: darkgray;
+  cursor: pointer;
+}
+.current-slide-indicator {
+  color: white;
+}
+.error {
+  color: red;
+  font-size: 1.2rem;
+  text-align: center;
+}
