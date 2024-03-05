@@ -1,7 +1,8 @@
-import { useEffect, useState } from "react";
 import MenuList from "./MenuList";
-import "./TreeView.css";
+import { useState } from "react";
 import { FaMinus, FaPlus } from "react-icons/fa";
+import PropTypes from 'prop-types'
+import "./TreeView.css";
 
 const MenuItem = ({ item = [] }) => {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -24,5 +25,9 @@ const MenuItem = ({ item = [] }) => {
     </li>
   );
 };
+
+MenuItem.propTypes = {
+  item: PropTypes.array,
+}
 
 export default MenuItem;

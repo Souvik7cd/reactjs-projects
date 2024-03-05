@@ -1,4 +1,3 @@
-import { useState } from "react";
 import "./SwitchTheme.css";
 import useLocalStorage from "./useLocalStorage";
 

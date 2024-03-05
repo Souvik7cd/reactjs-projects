@@ -1,7 +1,6 @@
-import { useState } from "react";
-import "./TreeView.css";
-import { useEffect } from "react";
+import PropTypes from 'prop-types'
 import MenuList from "./MenuList";
+import "./TreeView.css";
 
 const TreeView = ({ menus = [] }) => {
   return (
@@ -12,5 +11,9 @@ const TreeView = ({ menus = [] }) => {
     </div>
   );
 };
+
+TreeView.propTypes = {
+  menus: PropTypes.array
+}
 
 export default TreeView;

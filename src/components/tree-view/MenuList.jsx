@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 import MenuItem from "./MenuItem"
 import "./TreeView.css"
 
@@ -13,6 +14,11 @@ const MenuList = ({list = [], display=true}) => {
       }
     </ul>
   )
+}
+
+MenuList.propTypes = {
+  list: PropTypes.array,
+  display: PropTypes.bool,
 }
 
 export default MenuList
