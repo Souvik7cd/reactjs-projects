@@ -42,7 +42,7 @@ const RandomColor = () => {
   }, [typeOfColor]) // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
-    <div className="container" style={{ backgroundColor: color }}>
+    <div className="wrapper" style={{ backgroundColor: color }}>
       <div className="button-container">
         <button onClick={() => setTypeOfColor("rgb")}>RGB Color</button>
         <button onClick={() => setTypeOfColor("hex")}>HEX Color</button>

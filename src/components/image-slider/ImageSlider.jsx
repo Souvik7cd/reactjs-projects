@@ -61,7 +61,7 @@ const ImageSlider = ({ url, page, limit }) => {
   }
 
   return (
-    <div className="container">
+    <div className="wrapper">
       <div className="image-container position-relative">
         {images.map(({ id, download_url }, index) => {
           return (
