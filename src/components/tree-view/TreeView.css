@@ -1,0 +1,28 @@
+.menu-container {
+  height: 100vh;
+  width: 320px;
+  background-color: darkcyan;
+  color: white;
+  position: relative;
+}
+.menu {
+  margin: 0 !important;
+}
+.menu-item {
+  position: relative;
+}
+.menu-item-label {
+  padding: 1rem 0;
+}
+.menu-item-icon {
+  padding-left: 0.5rem;
+  cursor: pointer;
+}
+.d-none {
+  display: none;
+}
+ul.menu-list-container {
+  list-style-type: none;
+  margin: 0;
+  padding-left: 32px;
+}
