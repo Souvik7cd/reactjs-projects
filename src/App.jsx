@@ -13,7 +13,7 @@ function App() {
       <RandomColor />
       <StarRating noOfStars={10}/>
       <ImageSlider url="https://picsum.photos/v2/list" page={10} limit={10}/>
-      <LoadMore url="https://dummyjson.com/products" limit={10} />
+      <LoadMore url="https://dummyjson.com/products" limit={20} />
     </>
   )
 }

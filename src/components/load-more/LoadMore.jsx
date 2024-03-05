@@ -6,7 +6,7 @@ const LoadMore = ({ url, limit }) => {
   const [products, setProducts] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState();
-
+  const [disableBtn, setDisableBtn] = useState(false);
   const [skip, setSkip] = useState(0);
 
   const fetchProducts = async () => {
@@ -32,6 +32,9 @@ const LoadMore = ({ url, limit }) => {
   useEffect(() => {
     fetchProducts();
   }, []);
+  useEffect(() => {
+    if(products && products.length === 100) setDisableBtn(true);
+  })
 
   const handleLoadMore = () => {
     fetchProducts();
@@ -63,8 +66,9 @@ const LoadMore = ({ url, limit }) => {
             ))}
         </div>
         {isLoading && <div style={{ textAlign: "center" }}>Loading...</div>}
+        {products && products.length === 100 && <div style={{ textAlign: "center" }}>Loaded all 100 products</div>}
         <div className="btn-container">
-          <button className="load-more" onClick={handleLoadMore}>
+          <button className="load-more" disabled={disableBtn} onClick={handleLoadMore}>
             Load More
           </button>
         </div>
