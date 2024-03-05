@@ -11,7 +11,6 @@ const LoadMore = ({ url, limit }) => {
 
   const fetchProducts = async () => {
     const endpoint = `${url}?limit=${limit}&skip=${skip}`;
-    console.log(endpoint);
     try {
       setIsLoading(true);
       const response = await fetch(endpoint);
