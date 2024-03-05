@@ -3,11 +3,12 @@ import "./TreeView.css";
 import { useEffect } from "react";
 import MenuList from "./MenuList";
 
-const TreeView = ({menus = []}) => {
-
+const TreeView = ({ menus = [] }) => {
   return (
-    <div className="menu-container">
-      <MenuList list={menus}/>
+    <div className="bg-treeview">
+      <div className="menu-container">
+        <MenuList list={menus} />
+      </div>
     </div>
   );
 };
