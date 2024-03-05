@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import PropTypes from "prop-types";
+import "./LoadMore.css";
 
 const LoadMore = ({ url, limit }) => {
   const [products, setProducts] = useState([]);
@@ -41,14 +42,33 @@ const LoadMore = ({ url, limit }) => {
   }
 
   return (
-    <div className="container">
-      {products.length>0 && products.map((product, index) => (
-        <div key={index}>{product.title}</div>
-      ))}
-      {isLoading && <div>Loading...</div>}
-      <button className="load-more" onClick={handleLoadMore}>
-        Load More
-      </button>
+    <div className="bg-products">
+      <div className="container">
+        <div className="product-grid">
+          {products.length > 0 &&
+            products.map((product, index) => (
+              <div className="product-card" key={index}>
+                <div className="product-card-img">
+                  <img
+                    className="product-img"
+                    src={product.thumbnail}
+                    alt={product.thumbnail}
+                  />
+                </div>
+                <div className="product-card-body">
+                  <h4>{product.title}</h4>
+                  <p>{product.description}</p>
+                </div>
+              </div>
+            ))}
+        </div>
+        {isLoading && <div style={{ textAlign: "center" }}>Loading...</div>}
+        <div className="btn-container">
+          <button className="load-more" onClick={handleLoadMore}>
+            Load More
+          </button>
+        </div>
+      </div>
     </div>
   );
 };

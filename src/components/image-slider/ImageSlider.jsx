@@ -53,15 +53,15 @@ const ImageSlider = ({ url, page, limit }) => {
   }
 
   if (error) {
-    return <div className="container error">{error.message}</div>;
+    return <div className="wrapper error bg-slider">{error.message}</div>;
   }
 
   if (isLoading) {
-    return <div className="container">Loading images...</div>;
+    return <div className="wrapper bg-slider">Loading images...</div>;
   }
 
   return (
-    <div className="wrapper">
+    <div className="wrapper bg-slider">
       <div className="image-container position-relative">
         {images.map(({ id, download_url }, index) => {
           return (

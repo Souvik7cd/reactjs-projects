@@ -18,7 +18,7 @@ const StarRating = ({ noOfStars = 5 }) => {
   };
 
   return (
-    <div className="wrapper">
+    <div className="wrapper bg-star">
       <h2>Star Rating</h2>
       <span>
         {[...Array(noOfStars)].map((_, index) => {
