@@ -27,7 +27,7 @@ const MenuItem = ({ item = [] }) => {
 };
 
 MenuItem.propTypes = {
-  item: PropTypes.array,
+  item: PropTypes.object,
 }
 
 export default MenuItem;

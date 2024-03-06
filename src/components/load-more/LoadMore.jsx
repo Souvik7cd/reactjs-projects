@@ -35,8 +35,7 @@ const LoadMore = ({ url, limit }) => {
   
   useEffect(() => {
     if(products && products.length === 100) setDisableBtn(true);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  },[])
+  },[products])
 
   const handleLoadMore = () => {
     fetchProducts();

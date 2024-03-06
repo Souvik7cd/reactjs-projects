@@ -4,6 +4,7 @@ import ImageSlider from './components/image-slider/ImageSlider'
 import LoadMore from './components/load-more/LoadMore'
 import QrCodeGenerator from './components/qr-code-generator/QrCodeGenerator'
 import RandomColor from './components/random-color/RandomColor'
+import ScrollIndicator from './components/scroll-indicator/ScrollIndicator'
 import StarRating from './components/star-rating/StarRating'
 import SwitchTheme from './components/switch-theme/SwitchTheme'
 import TreeView from './components/tree-view/TreeView'
@@ -14,6 +15,7 @@ function App() {
 
   return (
     <>
+      <ScrollIndicator />
       <Accordion />
       <RandomColor />
       <StarRating noOfStars={10}/>
