@@ -1,5 +1,6 @@
 import './App.css'
 import Accordion from './components/accordion/Accordion'
+import CustomTabs from './components/custom-tabs/CustomTabs'
 import ImageSlider from './components/image-slider/ImageSlider'
 import LoadMore from './components/load-more/LoadMore'
 import QrCodeGenerator from './components/qr-code-generator/QrCodeGenerator'
@@ -24,6 +25,7 @@ function App() {
       <TreeView menus={menus} />
       <QrCodeGenerator />
       <SwitchTheme />
+      <CustomTabs />
     </>
   )
 }

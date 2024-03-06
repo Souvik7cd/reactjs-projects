@@ -38,7 +38,7 @@ const Accordion = () => {
   };
 
   return (
-    <div className="wrapper bg-accordion">
+    <div className="accordion-wrapper bg-accordion">
       <button
         className="enable-btn"
         onClick={toggleMultiSelection}

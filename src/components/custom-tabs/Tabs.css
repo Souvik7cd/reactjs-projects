@@ -1,0 +1,36 @@
+.tabs-wrapper {
+  height: calc(100vh - 130px);
+  padding: 2rem;
+}
+
+.tab-group .heading {
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid gray;
+}
+
+.tab-group .heading .label {
+  padding: 0.5rem 2rem;
+  border-bottom: 2px solid transparent;
+  cursor: pointer;
+  color: #666;
+}
+
+.tab-group .heading .label:hover {
+  background-color: #c4c4e7;
+  color: #383897;
+}
+
+.tab-group .heading .label:active {
+  background-color: #a0a0cf;
+}
+
+.tab-group .heading .label-active {
+  background-color: #dbdbf0;
+  border-bottom: 2px solid #383897;
+  color: #383897;
+}
+
+.tab-group .content {
+  margin: 1rem;
+}
