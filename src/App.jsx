@@ -3,6 +3,7 @@ import Accordion from './components/accordion/Accordion'
 import CustomTabs from './components/custom-tabs/CustomTabs'
 import ImageSlider from './components/image-slider/ImageSlider'
 import LoadMore from './components/load-more/LoadMore'
+import ModalTest from './components/modal/ModalTest'
 import QrCodeGenerator from './components/qr-code-generator/QrCodeGenerator'
 import RandomColor from './components/random-color/RandomColor'
 import ScrollIndicator from './components/scroll-indicator/ScrollIndicator'
@@ -26,6 +27,7 @@ function App() {
       <QrCodeGenerator />
       <SwitchTheme />
       <CustomTabs />
+      <ModalTest />
     </>
   )
 }
