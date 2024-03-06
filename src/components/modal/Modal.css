@@ -21,8 +21,8 @@
 }
 
 @keyframes modal-open {
-  from { top: -300px; opacity: 0; }
-  to { top: 50%; opacity: 1; }
+  from { bottom: 600px; opacity: 0; }
+  to { bottom: 50px; opacity: 1; }
 }
 
 .modal button {

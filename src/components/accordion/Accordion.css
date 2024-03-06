@@ -20,7 +20,7 @@
 }
 
 .accordion {
-  width: 728px;
+  max-width: 728px;
   margin-bottom: 3rem;
 }
 
