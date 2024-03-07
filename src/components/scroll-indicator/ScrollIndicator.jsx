@@ -7,7 +7,7 @@ const ScrollIndicator = () => {
     const docElem = document.documentElement;
     const relativeHeight = docElem.scrollHeight - docElem.clientHeight;
 
-    setScrollPercentage(Math.round((100 * docElem.scrollTop) / relativeHeight));
+    setScrollPercentage(100 * docElem.scrollTop / relativeHeight);
   };
 
   useEffect(() => {
