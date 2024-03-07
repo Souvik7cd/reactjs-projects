@@ -33,7 +33,7 @@ const GitHubProfileFinder = () => {
           onSubmit={(e) => {
             e.preventDefault();
             setError()
-            fetchGithubProfileData(searchText);
+            fetchGithubProfileData(searchText.trim());
             setSearchText("");
           }}
           className="search-form"
@@ -46,7 +46,7 @@ const GitHubProfileFinder = () => {
             placeholder="Search by github username..."
             onChange={(e) => setSearchText(e.target.value)}
           />
-          <button className="search-btn">
+          <button disabled={searchText.trim()===""} className="search-btn">
             <FaSearch />
           </button>
         </form>
