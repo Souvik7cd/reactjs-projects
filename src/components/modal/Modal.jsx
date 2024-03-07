@@ -17,9 +17,9 @@ const Modal = ({ header, body, footer, show = false }) => {
 };
 
 Modal.propTypes = {
-  header: PropTypes.object | PropTypes.string,
-  body: PropTypes.object | PropTypes.string,
-  footer: PropTypes.object | PropTypes.string,
+  header: PropTypes.object,
+  body: PropTypes.object,
+  footer: PropTypes.object,
   show: PropTypes.bool,
 };
 
