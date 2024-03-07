@@ -21,8 +21,8 @@
 }
 
 @keyframes modal-open {
-  from { bottom: 600px; opacity: 0; }
-  to { bottom: 50px; opacity: 1; }
+  from { top: 600px; opacity: 0; }
+  to { top: 50%; opacity: 1; }
 }
 
 .modal button {
@@ -74,4 +74,8 @@
 
 .close-btn:active {
   background-color: #e0e0e0;
+}
+
+.open-modal-btn {
+  padding: 1rem;
 }

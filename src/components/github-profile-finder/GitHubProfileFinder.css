@@ -1,9 +1,9 @@
 .github-container {
-  height: calc(100vh - 70px);
+  height: calc(100vh - 120px);
   background-color: #f6f6f6;
 }
 .result-container {
-  padding-top: 10rem;
+  padding-top: 5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
