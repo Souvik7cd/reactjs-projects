@@ -8,6 +8,7 @@ import ModalTest from './components/modal/ModalTest'
 import QrCodeGenerator from './components/qr-code-generator/QrCodeGenerator'
 import RandomColor from './components/random-color/RandomColor'
 import ScrollIndicator from './components/scroll-indicator/ScrollIndicator'
+import SearchAutocomplete from './components/search-autocomplete/SearchAutocomplete'
 import StarRating from './components/star-rating/StarRating'
 import SwitchTheme from './components/switch-theme/SwitchTheme'
 import TreeView from './components/tree-view/TreeView'
@@ -30,6 +31,7 @@ function App() {
       <CustomTabs />
       <ModalTest />
       <GitHubProfileFinder />
+      <SearchAutocomplete />
     </>
   )
 }
