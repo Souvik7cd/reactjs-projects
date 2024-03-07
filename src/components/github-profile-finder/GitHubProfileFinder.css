@@ -1,0 +1,50 @@
+.github-container {
+  height: calc(100vh - 70px);
+}
+.result-container {
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.search-form {
+  display: flex;
+  gap: 0.4rem;
+}
+.search-form #search-input {
+  padding: 0.3rem;
+  width: 300px;
+  font-size: 1rem;
+}
+.search-form .search-btn {
+  padding: 0.5rem;
+  display: flex;
+  gap: 0.2rem;
+  align-items: center;
+  cursor: pointer;
+}
+.card {
+  margin: 1rem;
+  border: 1px solid gray;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.profile-img {
+  height: 8rem;
+  border-radius: 50%;
+}
+.user-info {
+  width: 280px;
+}
+.key {
+  font-weight: bold;
+}
+.error,.searching {
+  padding: 1rem;
+}
+.error {
+  color: red;
+}

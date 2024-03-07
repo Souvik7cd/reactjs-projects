@@ -1,6 +1,7 @@
 import './App.css'
 import Accordion from './components/accordion/Accordion'
 import CustomTabs from './components/custom-tabs/CustomTabs'
+import GitHubProfileFinder from './components/github-profile-finder/GitHubProfileFinder'
 import ImageSlider from './components/image-slider/ImageSlider'
 import LoadMore from './components/load-more/LoadMore'
 import ModalTest from './components/modal/ModalTest'
@@ -28,6 +29,7 @@ function App() {
       <SwitchTheme />
       <CustomTabs />
       <ModalTest />
+      <GitHubProfileFinder />
     </>
   )
 }
