@@ -29,6 +29,7 @@ const GitHubProfileFinder = () => {
   return (
     <div className="github-container">
       <div className="result-container">
+        <h1>Github User Search</h1>
         <form
           onSubmit={(e) => {
             e.preventDefault();
