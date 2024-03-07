@@ -22,6 +22,7 @@ h1.qr-heading {
   height: 26px;
 }
 .form-field-inline button{
+  margin-left: 0.5rem;
   padding: 0.5rem 0.4rem;
   height: 100%;
   font-size: 16px;

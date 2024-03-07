@@ -11,22 +11,29 @@
 .enable-btn {
   cursor: pointer;
   padding: 1rem;
+  border: 1px solid darkolivegreen;
   background-color: darkolivegreen;
   color: white;
+  font-size: 1rem;
 }
 
 .enable-btn:hover {
-  background-color: rgb(66, 85, 33);
+  border: 1px solid #3d501d;
+  background-color: #3d501d;
+}
+
+.enable-btn:active {
+  border: 1px solid #2e3b16;
+  background-color: #2e3b16;
 }
 
 .accordion {
-  max-width: 728px;
+  width: 728px;
   margin-bottom: 3rem;
 }
 
 .accordion-item {
   margin: 1rem;
-  border: 1px solid black;
   background-color: rgb(50, 65, 26);
   color: white;
 }
@@ -47,5 +54,4 @@
 .accordion-body {
   padding: 1rem;
   text-align: left;
-  border-top: 1px solid black;
 }

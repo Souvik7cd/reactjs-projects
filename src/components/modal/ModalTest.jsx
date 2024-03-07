@@ -16,7 +16,7 @@ const ModalTest = () => {
     <>
       <div>Modal Header</div>
       <button className="close-btn" onClick={()=>setShowModal(false)}>
-        <IoMdClose />
+        <IoMdClose size={"60px"}/>
       </button>
     </>
   );
@@ -38,14 +38,14 @@ const ModalTest = () => {
   );
   const footer = (
     <>
-      <button onClick={()=>setShowModal(false)}>OK</button>
-      <button onClick={()=>setShowModal(false)}>Cancel</button>
+      <button className="btn-primary" onClick={()=>setShowModal(false)}>OK</button>
+      <button className="btn-primary" onClick={()=>setShowModal(false)}>Cancel</button>
     </>
   );
 
   return (
     <div className="wrapper bg-modaltest">
-      <button className="open-modal-btn" onClick={handleOpenModal}>
+      <button className="btn-primary open-modal-btn" onClick={handleOpenModal}>
         Open Modal
       </button>
       <Modal header={header} body={body} footer={footer} show={showModal} />

@@ -20,3 +20,29 @@
   outline: 2px solid purple;
   outline-offset: 2px;
 }
+
+.suggestions {
+  position: relative;
+}
+
+ul.dropdown {
+  position: absolute;
+  padding: 0;
+  border: 1px solid gray;
+  width: 310px;
+  margin-top: 6px;
+  border-radius: 0.5rem;
+  max-height: 200px;
+  overflow-y: auto;
+}
+ul.dropdown li{
+  list-style-type: none;
+  padding: 0.6rem 0.8rem;
+  cursor: pointer;
+}
+ul.dropdown li:nth-child(1) {
+  border-radius: 0.4rem 0.4rem 0 0;
+}
+ul.dropdown li:hover{
+  background-color: rgb(218, 167, 218);
+}

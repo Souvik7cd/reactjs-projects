@@ -67,13 +67,18 @@
   border: 0;
   cursor: pointer;
   background-color: transparent;
-  height: 28px;
-  width: 28px;
+  height: 32px;
+  width: 32px;
   border-radius: 50%;
+  padding: 0.3rem;
+}
+
+.close-btn:hover {
+  background-color: #dddddd;
 }
 
 .close-btn:active {
-  background-color: #e0e0e0;
+  background-color: #c5c5c5;
 }
 
 .open-modal-btn {

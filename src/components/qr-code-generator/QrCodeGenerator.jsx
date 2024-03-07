@@ -18,7 +18,7 @@ const QrCodeGenerator = () => {
           }}
           className="form-field-inline"
         >
-          <input
+          <input className="auto-complete-input"
             id="qr-text"
             name="qr-text"
             type="text"
@@ -26,7 +26,7 @@ const QrCodeGenerator = () => {
             onChange={(e) => setInputValue(e.target.value)}
             placeholder="Type your message here..."
           />
-          <button
+          <button className="btn-primary"
             disabled={!(inputValue && inputValue.trim() !== "")}
             type="submit"
           >

@@ -5,13 +5,14 @@ const SearchAutocomplete = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState();
   const [users, setUsers] = useState([]);
-  const [searchInput, setSearchInput] = useState("");
+  const [searchText, setSearchText] = useState("");
+  const [filteredUsers, setFilteredUsers] = useState([]);
 
   useEffect(() => {
     const fetchListOfUsers = async () => {
       try {
         setLoading(true);
-        const response = fetch(`https://dummyjson.com/users`);
+        const response = await fetch("https://dummyjson.com/users");
         if (!response.ok) {
           throw Error("Network Error: Couldn't fetch the user list");
         }
@@ -27,15 +28,31 @@ const SearchAutocomplete = () => {
     };
 
     fetchListOfUsers();
-  }, [])
+  }, []);
 
   const handleSearchAutocomplete = (e) => {
-    setTimeout(()=>{
-      console.log(e.target.value);
-      setSearchInput(e.target.value);
-      
-    }, 500);
-  }
+    setSearchText(e.target.value);
+    if (e.target.value.trim().toLowerCase() === "") {
+      setFilteredUsers([]);
+    } else {
+      setTimeout(() => {
+        const query = e.target.value.trim().toLowerCase();
+        if (query !== "") {
+          const filtered = users.filter((user) => {
+            if (user.firstName.toLowerCase().includes(query)) {
+              return user;
+            }
+          });
+          setFilteredUsers(filtered);
+        }
+      }, 500);
+    }
+  };
+
+  const handleListClick = (firstName) => {
+    setSearchText(firstName);
+    setFilteredUsers([]);
+  };
 
   return (
     <div className="search-autocomplete-container">
@@ -45,14 +62,35 @@ const SearchAutocomplete = () => {
           className="auto-complete-input"
           name="search-users"
           type="text"
-          placeholder={error ? "Please check your internet connection" : "Search users here..."}
+          value={searchText}
+          placeholder={
+            error
+              ? "Please check your internet connection"
+              : "Search user by first name here..."
+          }
           onChange={handleSearchAutocomplete}
           disabled={error}
         />
-
-        {
-          error && <div style={{paddingTop: "1rem", color: "red"}}>{error}</div> 
-        }
+        <div className="suggestions">
+          {filteredUsers && filteredUsers.length > 0 && (
+            <ul className="dropdown">
+              {filteredUsers.map((user) => (
+                <li
+                  key={user.id}
+                  onClick={() => handleListClick(user.firstName)}
+                >
+                  {user.firstName}
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
+        {error && (
+          <div style={{ paddingTop: "1rem", color: "red" }}>{error}</div>
+        )}
+        {loading && (
+          <div style={{ paddingTop: "1rem" }}>Loading user data...</div>
+        )}
       </div>
     </div>
   );

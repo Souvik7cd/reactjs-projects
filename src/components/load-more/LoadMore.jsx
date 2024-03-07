@@ -66,11 +66,10 @@ const LoadMore = ({ url, limit }) => {
               </div>
             ))}
         </div>
-        {isLoading && <div style={{ textAlign: "center" }}>Loading...</div>}
         {products && products.length === 100 && <div style={{ textAlign: "center" }}>Loaded all 100 products</div>}
         <div className="btn-container">
-          <button className="load-more" disabled={disableBtn} onClick={handleLoadMore}>
-            Load More
+          <button className="load-more btn-primary" disabled={disableBtn} onClick={handleLoadMore}>
+            { isLoading ? <>Loading...</> : <>Load More</>}
           </button>
         </div>
       </div>
