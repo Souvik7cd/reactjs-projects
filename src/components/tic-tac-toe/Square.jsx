@@ -1,25 +1,15 @@
 import PropTypes from "prop-types";
-import { useEffect, useState } from "react";
 import "./Board.css";
 
-const Square = ({ value, handleSquareClick, result }) => {
-  const [isDisabled, setIsDisabled] = useState(false);
-
-  useEffect(() => {
-    !result && setIsDisabled(false);
-  },[result, setIsDisabled])
+const Square = ({ value, onSquareClick }) => {
 
   return (
     <button
-      className={`square ${value === 'X' ? 'text-X' : 'text-O'}`}
-      disabled={isDisabled || result}
-      onClick={() => {
-        setIsDisabled(true);
-        handleSquareClick();
-      }}
+      className={`square ${value === "X" ? "text-X" : "text-O"}`}
+      onClick={onSquareClick}
     >
-      <span style={{height: "39px", width: "39px", display: "block"}}>
-        {value === null ? <wbr/> : value}
+      <span style={{ height: "39px", width: "39px", display: "block" }}>
+        {value === null ? <wbr /> : value}
       </span>
     </button>
   );
@@ -27,8 +17,7 @@ const Square = ({ value, handleSquareClick, result }) => {
 
 Square.propTypes = {
   value: PropTypes.string,
-  handleSquareClick: PropTypes.func,
-  result: PropTypes.string
+  onSquareClick: PropTypes.func,
 };
 
 export default Square;

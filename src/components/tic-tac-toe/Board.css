@@ -89,9 +89,21 @@ button.square:disabled {
   animation: win-diagonal-2 0.5s;
   transform: rotate(45deg);
 }
-.game-container {
+.game {
   height: calc(100vh - 70px - 32px);
   padding: 16px ;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.game-container {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.game-board {
   display: flex;
   flex-direction: column;
   align-items: center;
