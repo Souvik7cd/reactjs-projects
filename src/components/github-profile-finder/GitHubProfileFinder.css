@@ -1,6 +1,5 @@
 .github-container {
   height: calc(100vh - 120px);
-  background-color: #f6f6f6;
 }
 .result-container {
   padding-top: 5rem;

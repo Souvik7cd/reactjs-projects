@@ -27,7 +27,7 @@ const GitHubProfileFinder = () => {
   };
 
   return (
-    <div className="github-container">
+    <div className="github-container bg-github">
       <div className="result-container">
         <h1>Github User Search</h1>
         <form
