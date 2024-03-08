@@ -11,6 +11,7 @@ import ScrollIndicator from './components/scroll-indicator/ScrollIndicator'
 import SearchAutocomplete from './components/search-autocomplete/SearchAutocomplete'
 import StarRating from './components/star-rating/StarRating'
 import SwitchTheme from './components/switch-theme/SwitchTheme'
+import Board from './components/tic-tac-toe/Board'
 import TreeView from './components/tree-view/TreeView'
 
 import {menus} from './components/tree-view/menus'
@@ -32,6 +33,7 @@ function App() {
       <ModalTest />
       <GitHubProfileFinder />
       <SearchAutocomplete />
+      <Board />
     </>
   )
 }

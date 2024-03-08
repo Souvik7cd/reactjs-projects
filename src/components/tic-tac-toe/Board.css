@@ -1,0 +1,115 @@
+button.square {
+  width: 64px;
+  height: 64px;
+  cursor: pointer;
+  background-color: white;
+  border: 1px solid gray;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+button.square:disabled {
+  cursor: default;
+  background-color: white;
+  border: 1px solid gray;
+}
+
+.text-X { color: blue; }
+.text-O { color: darkred; }
+
+.board {
+  position: relative;
+  max-width: calc(64px * 3);
+  max-height: calc(64px * 3);
+}
+
+.win {
+  background-color: green;
+  position: absolute;
+  display: block;
+}
+
+.hor1 { 
+  height: 4px;
+  top: 32px;
+  left: 10px;
+  animation: win-horizontal 0.5s;
+  width: calc(calc(64px * 3) - 20px);
+}
+.hor2 { 
+  height: 4px;
+  top: calc(32px * 3);
+  left: 10px;
+  animation: win-horizontal 0.5s;
+  width: calc(calc(64px * 3) - 20px);
+}
+.hor3 { 
+  height: 4px;
+  top: calc(32px * 5);
+  left: 10px;
+  animation: win-horizontal 0.5s;
+  width: calc(calc(64px * 3) - 20px);
+}
+
+.ver1 { 
+  width: 4px;
+  top: 10px;
+  left: 32px;
+  animation: win-vertical 0.5s;
+  height: calc(calc(64px * 3) - 20px);
+}
+.ver2 { 
+  width: 4px;
+  top: 10px;
+  left: calc(32px * 3);
+  animation: win-vertical 0.5s;
+  height: calc(calc(64px * 3) - 20px);
+}
+.ver3 { 
+  width: 4px;
+  top: 10px;
+  left: calc(32px * 5);
+  animation: win-vertical 0.5s;
+  height: calc(calc(64px * 3) - 20px);
+}
+
+.diag1 { 
+  height: calc(64px * 3);
+  width: 4px;
+  left: 96px;
+  top: 0px;
+  animation: win-diagonal-1 0.5s;
+  transform: rotate(-45deg);
+}
+.diag2 { 
+  height: calc(64px * 3);
+  width: 4px;
+  right: 96px;
+  top: 0px;
+  animation: win-diagonal-2 0.5s;
+  transform: rotate(45deg);
+}
+.game-container {
+  height: calc(100vh - 70px - 32px);
+  padding: 16px ;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@keyframes win-horizontal {
+  from {width: 0px;}
+  to{width: calc(calc(64px * 3) - 20px);}
+}
+@keyframes win-vertical {
+  from {height: 0px;}
+  to{height: calc(calc(64px * 3) - 20px);}
+}
+@keyframes win-diagonal-1 {
+  from {height: 0px; left: 0px;}
+  to{height: calc(64px * 3); left: 96px;}
+}
+@keyframes win-diagonal-2 {
+  from {height: 0px; right: 0px;}
+  to{height: calc(64px * 3); right: 96px;}
+}
